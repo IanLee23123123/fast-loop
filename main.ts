@@ -13,7 +13,3 @@ namespace fastloop {
         });
     }
 }
-fastloop.runFastLoop(10, function () {
-    led.toggle(2, 2); // Blinks the center LED quickly
-});
-
