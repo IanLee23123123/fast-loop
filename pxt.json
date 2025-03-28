@@ -4,5 +4,6 @@
     "license": "MIT",
     "dependencies": {
         "core": "*"
+        "icon": "icon.svg"
     }
 }
