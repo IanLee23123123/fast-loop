@@ -1,24 +1,19 @@
+# Fast Loop Extension for micro:bit 🚀
 
-> Open this page at [https://ianlee23123123.github.io/fast-loop/](https://ianlee23123123.github.io/fast-loop/)
+This MakeCode extension adds a **fast loop** block to run code at high speed without blocking other tasks.
 
-## Use as Extension
+## 🛠 Features
+- Runs a function repeatedly at a specified interval (as low as 1ms).
+- Uses `control.waitMicros()` for precision timing.
+- Runs in the background without affecting the main loop.
 
-This repository can be added as an **extension** in MakeCode.
+## 🧩 Blocks
+### 🔄 Fast Loop Block
+| Block | Description |
+|-------|------------|
+| ![Fast Loop Block]([https://github.com/YOUR-USERNAME/pxt-fastloop/raw/main/icon.svg](https://github.com/IanLee23123123/fast-loop/)) | Runs code every X milliseconds in the background. |
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/ianlee23123123/fast-loop** and import
-
-## Edit this project
-
-To edit this repository in MakeCode.
-
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/ianlee23123123/fast-loop** and click import
-
-#### Metadata (used for search, rendering)
-
-* for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+```typescript
+fastloop.runFastLoop(10, function () {
+    led.toggle(2, 2); // Blink LED quickly
+});
